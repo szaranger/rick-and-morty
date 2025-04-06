@@ -15,7 +15,7 @@ import {
   Text, 
   Image 
 } from '@chakra-ui/react';
-import { Character } from '../../app/info/types';
+import { Character } from '@/app/info/types';
 
 interface CharacterModalProps {
   character: Character | null;
@@ -29,7 +29,7 @@ export default function CharacterModal({ character, isOpen, onClose }: Character
   return (
     <Modal isOpen={isOpen} onClose={onClose} size="md">
       <ModalOverlay />
-      <ModalContent bg="gray.800">
+      <ModalContent bg="gray.800" borderColor="portal.300" borderWidth={2}>
         <ModalHeader>{character.name}</ModalHeader>
         <ModalCloseButton />
         <ModalBody>

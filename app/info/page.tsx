@@ -54,7 +54,8 @@ export default function InfoPage() {
           <CharacterCard 
             key={char.id}
             character={char} 
-            onClick={handleCharacterClick} 
+            onClick={handleCharacterClick}
+            isSelected={selectedCharacter?.id === char.id}
           />
         ))}
       </SimpleGrid>

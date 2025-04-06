@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rick and Morty - Rick and Morty Character Explorer
+
+A Next.js application that allows users to explore Rick and Morty characters with a personalized experience.
+
+## Features
+
+- **User Preferences**: Customise your experience with user preferences
+- **Character Exploration**: Browse through Rick and Morty characters
+- **Character Details**: View detailed information about each character
+- **Responsive Design**: Works on desktop and mobile devices
+- **Dark Mode Support**: Built with Chakra UI for a dark mode experience
+
+## Tech Stack
+
+- **Frontend**: Next.js, React, TypeScript
+- **Styling**: Chakra UI
+- **State Management**: React Hooks
+- **Data Fetching**: Apollo Client, GraphQL
+- **Testing**: Jest, React Testing Library
+- **Documentation**: Storybook
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js (v18 or later)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/szaranger/rick-and-morty.git
+   cd rick-and-morty
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+
+5. You can also view the app on [Vercel]() 
+
+## Project Structure
+
+```
+rick-and-morty/
+├── app/                  # Next.js app directory
+│   ├── info/             # Info page with character list
+│   ├── __tests__/        # Tests for app components
+│   └── page.tsx          # Home page
+├── components/           # Reusable components
+│   ├── home/             # Components for home page
+│   └── info/             # Components for info page
+├── lib/                  # Utility libraries
+│   ├── graphql/          # GraphQL client and queries
+│   └── theme.ts          # Chakra UI theme configuration
+├── services/             # Service layer
+│   └── user-preferences.ts # User preferences service
+├── stories/              # Storybook stories
+│   ├── components/       # Component stories
+│   └── pages/            # Page stories
+└── public/               # Static assets (just one image)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Testing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Run the test suite:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm test
+# or
+yarn test
+```
 
-## Learn More
+## Storybook
 
-To learn more about Next.js, take a look at the following resources:
+View the component library:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run storybook
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+The application can be deployed to to Vercel.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- [Rick and Morty API](https://rickandmortyapi.com/) for providing the character data
+- [Next.js](https://nextjs.org/) for the amazing framework
+- [Chakra UI](https://chakra-ui.com/) for the component library

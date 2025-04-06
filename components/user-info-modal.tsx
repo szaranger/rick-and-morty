@@ -26,7 +26,7 @@ export function UserInfoModal({ onComplete }: Props) {
   return (
     <Modal isOpen={true} onClose={() => {}} isCentered>
       <ModalOverlay />
-      <ModalContent bg="gray.800">
+      <ModalContent bg="gray.800" borderColor="portal.300" borderWidth={2}>
         <ModalHeader>Enter Your Info</ModalHeader>
         <ModalBody>
           <FormControl>

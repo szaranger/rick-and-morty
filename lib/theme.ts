@@ -83,7 +83,7 @@ const components = {
   },
 }
 
-const theme = extendTheme({
+export const theme = extendTheme({
   colors,
   fonts,
   components,
@@ -99,6 +99,4 @@ const theme = extendTheme({
     initialColorMode: 'dark',
     useSystemColorMode: false,
   },
-})
-
-export default theme 
+}) 

@@ -1,6 +1,5 @@
-import { VStack, Heading, Text, Button, Flex, Link, Card, CardBody } from '@chakra-ui/react';
-import { LuArrowRight } from 'react-icons/lu';
-import { EditIcon } from '@chakra-ui/icons';
+import { VStack, Heading, Text, Button, Flex, Link, Card, CardBody, Avatar } from '@chakra-ui/react';
+import { LuArrowRight, LuPencil } from 'react-icons/lu';
 
 interface WelcomeCardProps {
   username: string;
@@ -16,33 +15,41 @@ export const WelcomeCard = ({ username, jobTitle, onEditClick }: WelcomeCardProp
       mx="auto"
       mt={8}
       p={6}
-      boxShadow="xl"
       borderRadius="xl"
       borderWidth={2}
       borderColor="portal.300"
       color="whiteAlpha.900"
       bg="gray.800"
+      sx={{
+        boxShadow: "0 0 15px 5px rgba(183, 148, 244, 0.5), 0 0 30px 10px rgba(183, 148, 244, 0.3)",
+        transition: "all 0.3s ease",
+        _hover: {
+          boxShadow: "0 0 20px 8px rgba(183, 148, 244, 0.6), 0 0 40px 15px rgba(183, 148, 244, 0.4)",
+          transform: "translateY(-2px)"
+        }
+      }}
     >
       <CardBody>
-        <VStack spacing={4} align="center">
-          <Heading size="lg" data-testid="welcome-heading">
+        <VStack spacing={4} align="center" color="portal.300">
+          <Avatar src="/rick.png" size="xxl" />
+          <Heading size="lg" data-testid="welcome-heading" color="morty.300">
             Welcome, {username}!
           </Heading>
           <Text fontSize="md" data-testid="job-title">
-            {jobTitle}
+            Your job title is <b>{jobTitle}</b>
           </Text>
           <Button
             data-testid="edit-profile-button"
-            colorScheme="blue"
+            colorScheme="portal"
             onClick={onEditClick}
-            leftIcon={<EditIcon />}
+            leftIcon={<LuPencil />}
           >
             Edit Profile
           </Button>
-          <Link href="/info?page=1">
-            <Flex alignItems="center" justifyContent="center" gap={2}>
-              <Text color="portal.300" fontWeight="bold">Visit Information Page</Text>
-              <LuArrowRight color="#9f7aea" />
+          <Link href="/info?page=1" mt={4}>
+            <Flex alignItems="center" justifyContent="center" gap={2} color="rick.300">
+              <Text fontWeight="bold">Visit Information Page</Text>
+              <LuArrowRight />
             </Flex>
           </Link>
         </VStack>

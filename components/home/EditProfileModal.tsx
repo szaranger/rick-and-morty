@@ -33,7 +33,7 @@ export const EditProfileModal = ({
   return (
     <Modal isOpen={isOpen} onClose={onClose} data-testid="edit-profile-modal">
       <ModalOverlay />
-      <ModalContent bg="gray.800">
+      <ModalContent bg="gray.800" borderColor="portal.300" borderWidth={2}>
         <form onSubmit={onSubmit} data-testid="edit-profile-form">
           <ModalHeader color="portal.300">Edit Profile</ModalHeader>
           <ModalCloseButton />

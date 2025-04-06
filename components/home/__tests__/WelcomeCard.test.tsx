@@ -4,9 +4,11 @@ import { WelcomeCard } from '../WelcomeCard';
 
 // Mock the next/link component
 jest.mock('next/link', () => {
-  return ({ children, href }: { children: React.ReactNode; href: string }) => {
+  const NextLink = ({ children, href }: { children: React.ReactNode; href: string }) => {
     return <a href={href}>{children}</a>;
   };
+  NextLink.displayName = 'NextLink';
+  return NextLink;
 });
 
 describe('WelcomeCard', () => {
