@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Center, useDisclosure, Text, Link } from '@chakra-ui/react';
+import { Box, Center, useDisclosure } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 
 import { getUserPreferences, setUserPreferences } from '@/services/user-preferences';
