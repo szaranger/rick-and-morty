@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 import { setUserPreferences } from '@/services/user-preferences';
 
-interface Props {
+type Props = {
   onComplete(): void;
 }
 
@@ -26,7 +26,7 @@ export function UserInfoModal({ onComplete }: Props) {
   return (
     <Modal isOpen={true} onClose={() => {}} isCentered>
       <ModalOverlay />
-      <ModalContent>
+      <ModalContent bg="gray.800">
         <ModalHeader>Enter Your Info</ModalHeader>
         <ModalBody>
           <FormControl>
