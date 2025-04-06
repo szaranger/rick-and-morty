@@ -12,7 +12,7 @@ import {
   Input 
 } from '@chakra-ui/react';
 
-interface EditProfileModalProps {
+type EditProfileModalProps = {
   isOpen: boolean;
   onClose: () => void;
   formData: {
@@ -23,6 +23,7 @@ interface EditProfileModalProps {
   onSubmit: (e: React.FormEvent) => void;
 }
 
+// Modal component for editing user profile information
 export const EditProfileModal = ({ 
   isOpen, 
   onClose, 
@@ -38,6 +39,7 @@ export const EditProfileModal = ({
           <ModalHeader color="portal.300">Edit Profile</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
+            {/* Username input field */}
             <FormControl mb={4}>
               <FormLabel>Username</FormLabel>
               <Input 
@@ -52,6 +54,7 @@ export const EditProfileModal = ({
                 data-testid="username-input"
               />
             </FormControl>
+            {/* Job title input field */}
             <FormControl>
               <FormLabel>Job Title</FormLabel>
               <Input 

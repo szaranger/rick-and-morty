@@ -17,12 +17,13 @@ import {
 } from '@chakra-ui/react';
 import { Character } from '@/app/info/types';
 
-interface CharacterModalProps {
+type CharacterModalProps = {
   character: Character | null;
   isOpen: boolean;
   onClose: () => void;
 }
 
+// Modal component that displays detailed information about a character
 export default function CharacterModal({ character, isOpen, onClose }: CharacterModalProps) {
   if (!character) return null;
 
@@ -34,6 +35,7 @@ export default function CharacterModal({ character, isOpen, onClose }: Character
         <ModalCloseButton />
         <ModalBody>
           <VStack spacing={4} align="stretch">
+            {/* Character image */}
             <Image 
               src={character.image} 
               alt={character.name} 
@@ -41,6 +43,7 @@ export default function CharacterModal({ character, isOpen, onClose }: Character
               mx="auto"
             />
             
+            {/* Character status badges */}
             <HStack>
               <Badge colorScheme={character.status === 'Alive' ? 'green' : character.status === 'Dead' ? 'red' : 'gray'}>
                 {character.status}
@@ -51,16 +54,19 @@ export default function CharacterModal({ character, isOpen, onClose }: Character
             
             <Divider />
             
+            {/* Character origin information */}
             <Box>
               <Text fontWeight="bold">Origin:</Text>
               <Text>{character.origin.name}</Text>
             </Box>
             
+            {/* Character location information */}
             <Box>
               <Text fontWeight="bold">Location:</Text>
               <Text>{character.location.name}</Text>
             </Box>
             
+            {/* Character episode count */}
             <Box>
               <Text fontWeight="bold">Episodes:</Text>
               <Text>{character.episode.length} episodes</Text>

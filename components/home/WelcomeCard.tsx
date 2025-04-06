@@ -1,12 +1,13 @@
 import { VStack, Heading, Text, Button, Flex, Link, Card, CardBody, Avatar } from '@chakra-ui/react';
 import { LuArrowRight, LuPencil } from 'react-icons/lu';
 
-interface WelcomeCardProps {
+type WelcomeCardProps = {
   username: string;
   jobTitle: string;
   onEditClick: () => void;
 }
 
+// Card component that displays a welcome message with user info
 export const WelcomeCard = ({ username, jobTitle, onEditClick }: WelcomeCardProps) => {
   return (
     <Card
@@ -20,6 +21,7 @@ export const WelcomeCard = ({ username, jobTitle, onEditClick }: WelcomeCardProp
       borderColor="portal.300"
       color="whiteAlpha.900"
       bg="gray.800"
+      // Add purple glow effect with hover animation
       sx={{
         boxShadow: "0 0 15px 5px rgba(183, 148, 244, 0.5), 0 0 30px 10px rgba(183, 148, 244, 0.3)",
         transition: "all 0.3s ease",

@@ -1,5 +1,6 @@
 import { Box, Image } from '@chakra-ui/react';
 
+// Background component that displays a full-screen image with a dark overlay
 export const Background = () => {
   return (
     <>
@@ -11,6 +12,7 @@ export const Background = () => {
         bottom="0"
         zIndex="0"
       >
+        {/* Full-screen background image */}
         <Image
           src="/falling.jpg"
           alt="Falling Rick and Morty Background"

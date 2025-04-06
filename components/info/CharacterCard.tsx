@@ -14,16 +14,20 @@ export default function CharacterCard({ character, onClick, isSelected = false }
       bg="morty.300" 
       borderWidth="2px" 
       borderRadius="lg"
+      // Change border color when selected
       borderColor={isSelected ? "morty.300" : "morty.200"}
       overflow="hidden" 
+      // Add glow effect when selected
       boxShadow={isSelected ? "0 0 15px 5px rgba(104, 211, 145, 0.6), 0 0 30px 10px rgba(104, 211, 145, 0.4)" : "md"}
       cursor="pointer"
       onClick={() => onClick(character)}
-      _hover={{ transform: 'scale(1.03)', transition: 'transform 0.2s', boxShadow: "0 0 20px 8px rgba(104, 211, 145, 0.2), 0 0 40px 15px rgba(104, 211, 145, 0.2)" }}
+      // Scale up and enhance glow on hover
+      _hover={{ transform: 'scale(1.03)', transition: 'transform 0.2s', boxShadow: isSelected ? "0 0 20px 8px rgba(104, 211, 145, 0.7), 0 0 40px 15px rgba(104, 211, 145, 0.5)" : 'lg' }}
       transition="all 0.2s"
     >
       <Box position="relative">
         <Image src={character.image} alt={character.name} width="100%" height="auto" />
+        {/* Status badge with color based on character status */}
         <Badge 
           position="absolute" 
           top={2} 
