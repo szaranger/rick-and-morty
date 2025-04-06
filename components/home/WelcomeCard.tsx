@@ -30,12 +30,12 @@ export const WelcomeCard = ({ username, jobTitle, onEditClick }: WelcomeCardProp
       }}
     >
       <CardBody>
-        <VStack spacing={4} align="center" color="portal.300">
-          <Avatar src="/rick.png" size="xxl" />
-          <Heading size="lg" data-testid="welcome-heading" color="morty.300">
+        <VStack spacing={4} align="center" color="portal.300" maxW="300px" mt={4}>
+          <Avatar src="/rick.png" size="xxl" maxH="200px" mt={-6} />
+          <Heading size="lg" data-testid="welcome-heading" color="morty.300" zIndex={1} mt={20}>
             Welcome, {username}!
           </Heading>
-          <Text fontSize="md" data-testid="job-title">
+          <Text fontSize="md" data-testid="job-title" zIndex={1}>
             Your job title is <b>{jobTitle}</b>
           </Text>
           <Button

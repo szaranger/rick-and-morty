@@ -46,7 +46,7 @@ A Next.js application that allows users to explore Rick and Morty characters wit
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-5. You can also view the app on [Vercel]() 
+5. You can also view the app on [Vercel](https://rick-and-morty-dusky-theta.vercel.app/) 
 
 ## Project Structure
 
@@ -76,8 +76,6 @@ Run the test suite:
 
 ```bash
 npm test
-# or
-yarn test
 ```
 
 ## Storybook
