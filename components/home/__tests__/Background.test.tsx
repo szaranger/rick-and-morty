@@ -20,7 +20,7 @@ describe('Background', () => {
     const darkOverlay = screen.getByTestId('dark-overlay');
     expect(darkOverlay).toBeInTheDocument();
     expect(darkOverlay).toHaveStyle({
-      backgroundColor: 'rgba(0, 0, 0, 0.7)',
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
     });
   });
 
